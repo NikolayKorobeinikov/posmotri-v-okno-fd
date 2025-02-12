@@ -64,7 +64,6 @@ textarea::placeholder {
 
 .content {
   max-width: 1140px;
-  max-height: 534px;
   display: grid;
   grid-template-columns: 711px 399px;
   grid-template-areas: "result content__details";
@@ -73,7 +72,6 @@ textarea::placeholder {
 
 .result {
   max-width: 711px;
-  height: 534px;
   grid-area: result;
   display: flex;
   flex-direction: column;
@@ -125,6 +123,7 @@ textarea::placeholder {
 .search-form__label {
   display: flex;
   width: fit-content;
+  align-items: center;  /* has been added */
 }
 
 .search-form__label:has(:focus-visible) {
@@ -138,7 +137,7 @@ textarea::placeholder {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  color: #ffffff;
+  color: currentColor; /* has been fixed */
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -177,7 +176,6 @@ textarea::placeholder {
 }
 
 .content__details {
-  height: 534px;
   grid-area: content__details;
 }
 
@@ -214,6 +212,7 @@ textarea::placeholder {
 }
 
 .content__card-link {
+  display: block; /* has been fixed */
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
@@ -257,7 +256,7 @@ textarea::placeholder {
 
 .content__video-card-description {
   margin-top: 6px;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;  /* has been fixed */
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -275,8 +274,8 @@ textarea::placeholder {
   object-position: center;
 }
 
+.content__card-link:active,
 .content__card-link_current {
-  display: block;
   background-color: rgba(84, 80, 80, 1);
 }
 

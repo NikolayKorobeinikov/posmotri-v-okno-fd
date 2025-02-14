@@ -71,11 +71,11 @@ textarea::placeholder {
 }
 
 .result {
+  padding-top: 78px;
   max-width: 711px;
   grid-area: result;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 16px;
 }
 
@@ -103,12 +103,10 @@ textarea::placeholder {
 
 .search-form__fieldset:first-child {
   width: 225px;
-  height: 54px;
 }
 
 .search-form__fieldset:nth-child(2) {
   width: 212px;
-  height: 49px;
 }
 
 .search-form__fieldset-title,
@@ -123,7 +121,7 @@ textarea::placeholder {
 .search-form__label {
   display: flex;
   width: fit-content;
-  align-items: center;  /* has been added */
+  align-items: center;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -137,7 +135,7 @@ textarea::placeholder {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  color: currentColor; /* has been fixed */
+  color: currentColor;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -185,6 +183,7 @@ textarea::placeholder {
   font-weight: 700;
   line-height: 70.5px;
   color: #ffffff;
+  text-transform: uppercase; /* tittle has been fixed */
   margin-bottom: 26px;
 }
 
@@ -242,21 +241,20 @@ textarea::placeholder {
   font-weight: 700;
   line-height: 30px;
   color: #ffffff;
+  text-transform: uppercase; /* tittle has been fixed */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .content__video-card-description-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .content__video-card-description {
   margin-top: 6px;
-  font-family: "Fira Sans Condensed", sans-serif;  /* has been fixed */
+  font-family: "Fira Sans Condensed", sans-serif; /* has been fixed */
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -299,11 +297,17 @@ textarea::placeholder {
   background-color: rgba(84, 80, 80, 1);
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .search-form__submit-button {
+  align-self: flex-end;
   width: 194px;
   height: 34px;
 }
@@ -324,4 +328,15 @@ textarea::placeholder {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
+}
+
+/* ERROR TEMPLATE */
+
+.error__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #ffffff;
+  text-transform: uppercase;
 }

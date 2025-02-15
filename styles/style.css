@@ -125,7 +125,7 @@ textarea::placeholder {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid rgba(255, 255, 255, 0.7);
+  outline: 1px solid rgba(255, 255, 255, 1); /* remark has been corrected */
 }
 
 .search-form__textfield {
